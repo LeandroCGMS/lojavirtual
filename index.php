@@ -20,11 +20,14 @@
                 <td></td>-->
                 <td><h1>Buscar: </h1></td>
                 <td><input id="caixa" type="text" name="buscar"/></td>
-                <td><input id="botao" type="submit" name="btbuscar" value="Buscar"/></td>
+                <td><input id="botao" type="submit" name="btbuscar" 
+                           value="Buscar"/></form></td>
             </tr>
-            <tr><td colspan="8"><img id="gif" src="imagens/Loja-Virtual.gif"/></td></tr>
+            <tr><td colspan="8"><img id="gif" src="imagens/Loja-Virtual.gif"/>
+                </td></tr>
             <tr  id="titulo" text-align="center">
-                <td valign="middle" align="center" colspan="8">LISTA DE PRODUTOS</td>
+                <td valign="middle" align="center" colspan="8">LISTA DE PRODUTOS
+                </td>
                 
             </tr>
             <tr id="campos">
@@ -69,17 +72,17 @@
                 <td class="quantidade"><?php echo $quant; ?></td>
                 <td><?php echo $data; ?></td>
                 <td>
-                    <form method="get" action="carrinho.php">
-                        <input type="hidden" name="id_txt" value="<?php echo $id ?>" />
+                    <form method="post" action="carrinho.php">
+                        <input type="hidden" name="id_txt" value="<?php echo $id ?>" >
                         <input type="submit" name="comprar" 
-                        value="Comprar"/>
+                        value="comprar"/>
                     </form>
                 </td>
             </tr>
             <?php } ?>  
         </table>
           
-        </form>
+        
         
         
     </body>
