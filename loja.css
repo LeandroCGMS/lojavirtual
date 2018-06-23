@@ -17,11 +17,36 @@ table {
 
 td {
     width: 200px;
+    text-align: center;
     height: 20px;
     align: center;
     valign: middle;
     background-color: graytext;
     border: 1px;
+}
+
+td.carrinho {
+    color: white;
+    background-color: black;
+    text-align: right;
+}
+
+td.car_tit {
+    background-color: black;
+    color: white;
+}
+
+td.car_subtit {
+    background-color: orange;
+}
+
+td.produtos {
+    background-color: bisque;
+}
+
+td.total {
+    background-color: bisque;
+    text-align: left;
 }
 
 td#vazia {

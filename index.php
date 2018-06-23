@@ -68,14 +68,19 @@
                 <td><img id="foto" src="<?php echo $imagem; ?>"/></td>
                 <td><?php echo $nome; ?></td>
                 <td class="quantidade"><?php echo $desc; ?></td>
-                <td><?php echo "R$ ".$preco; ?>,00</td>
+                <td><?php echo "R$ ".number_format($preco,2,',','.'); ?></td>
                 <td class="quantidade"><?php echo $quant; ?></td>
                 <td><?php echo $data; ?></td>
                 <td>
                     <form method="post" action="carrinho.php">
+                        
                         <input type="hidden" name="id_txt" value="<?php echo $id ?>" >
+                        <input type="hidden" name="nome" value="<?php echo $nome ?>" >
+                        <input type="hidden" name="preco" value="<?php echo $preco ?>" >
+                        <input type="hidden" name="quantidade" value="1" >
                         <input type="submit" name="comprar" 
                         value="comprar"/>
+                        
                     </form>
                 </td>
             </tr>
