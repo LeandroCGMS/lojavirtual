@@ -28,20 +28,22 @@
               <td colspan="4" class="car_tit">PRODUTOS</td>
           </tr>
           <tr>
-              <td class="car_subtit">ID</td>
               <td class="car_subtit">NOME</td>
               <td class="car_subtit">PREÇO</td>
               <td class="car_subtit">QUANTIDADE</td>
+              <td class="car_subtit">SUBTOTAL</td>
           </tr>
           <tr>
-              <td class="produtos"><?php echo $id; ?></td>
               <td class="produtos"><?php echo $nome; ?></td>
               <td class="produtos"><?php echo "R$ ".number_format($preco,2,',','.'); ?></td>
               <td class="produtos"><?php echo $quantidade; ?></td>
+              <td class="produtos"><?php echo "&nbsp;R$ "
+              .number_format($preco * $quantidade,2,',','.'); ?></td>
           </tr>
           <tr>
               <td colspan="3" class="carrinho">TOTAL:&nbsp;</td>
-              <td class="total"><?php echo "&nbsp;R$ ".number_format($preco * $quantidade,2,',','.'); ?></td>
+              <td class="car_tit"><?php echo "&nbsp;R$ "
+              .number_format($preco * $quantidade,2,',','.'); ?></td>
           </tr>
       </table>
   </body>
