@@ -1,5 +1,6 @@
 
 <?php
+//Nova edição pra ver o que será commitado
     require_once 'conecta.php';
 ?>
 <!doctype html>
