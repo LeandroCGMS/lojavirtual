@@ -4,9 +4,15 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="loja.css">
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Loja Virtual</title>
+<head>
+<meta charset="UTF-8">
+<title>Loja Virtual</title>
+<link rel="stylesheet" type="text/css" href="loja.css">
+<title>Seu Carrinho</title>
+<link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="bootstrap-4.1.1-dist/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<!-- jQuery library -->
+<script src="js/jquery-3.3.1.min.js"></script>
     </head>
     <body>
            
@@ -78,14 +84,15 @@
                         <input type="hidden" name="nome" value="<?php echo $nome ?>" >
                         <input type="hidden" name="preco" value="<?php echo $preco ?>" >
                         <input type="hidden" name="quantidade" value="1" >
-                        <input type="submit" name="comprar" 
-                        value="comprar"/>
+                        <input class="btn btn-success" type="submit" name="comprar" 
+                        value="Comprar"/>
                         
                     </form>
                 </td>
             </tr>
             <?php } ?>  
         </table>
+            <p><a class="btn btn-danger" href="carrinho.php">Carrinho de Compras</a>
           
         
         
