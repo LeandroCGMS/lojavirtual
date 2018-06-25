@@ -15,7 +15,7 @@
 <script src="js/jquery-3.3.1.min.js"></script>
     </head>
     <body>
-           
+        <div class="form-group">
         <form method="post" action="index.php">
             <table width="800px" border="4px" bordercolor="#000000">
             <tr id="buscar">
@@ -25,9 +25,11 @@
                 <td></td>
                 <td></td>-->
                 <td><h1>Buscar: </h1></td>
-                <td><input id="caixa" type="text" name="buscar"/></td>
-                <td><input id="botao" type="submit" name="btbuscar" 
-                           value="Buscar"/></form></td>
+                <td><input class="form-control" id="caixa" type="text" name="buscar"/></td>
+                <td><input class="btn btn-primary" type="submit" name="btbuscar" 
+                           value="Buscar"/></form>
+        </div>
+        </td>
             </tr>
             <tr><td colspan="8"><img id="gif" src="imagens/Loja-Virtual.gif"/>
                 </td></tr>
