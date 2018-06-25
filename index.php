@@ -14,12 +14,12 @@
 <!-- jQuery library -->
 <script src="js/jquery-3.3.1.min.js"></script>
     </head>
-    <body>
+    <body class="bg-dark">
         <div class="form-group">
         <form method="post" action="index.php">
             <table width="800px" border="4px" bordercolor="#000000">
             <tr id="buscar">
-                <td id="vazia" colspan="5"></td>
+                <td id="vazia" class="bg-dark" colspan="5"></td>
                 <!--<td></td>
                 <td></td>
                 <td></td>
@@ -78,7 +78,7 @@
                 <td class="quantidade"><?php echo $desc; ?></td>
                 <td><?php echo "R$ ".number_format($preco,2,',','.'); ?></td>
                 <td class="quantidade"><?php echo $quant; ?></td>
-                <td><?php echo $data; ?></td>
+                <td><?php echo date("d/m/Y", strtotime($data)); ?></td>
                 <td>
                     <form method="post" action="carrinho.php">
                         

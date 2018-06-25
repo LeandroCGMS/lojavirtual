@@ -15,7 +15,7 @@
     <!-- jQuery library -->
     <script src="js/jquery-3.3.1.min.js"></script>
   </head>
-  <body>
+  <body class="bg-dark">
       <p>Carrinho de Compras</p><br/><br/>
       <p>Meus produtos escolhidos são:</p><br/><br/>
     <?php
