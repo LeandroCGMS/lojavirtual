@@ -108,7 +108,13 @@ input#caixa {
     text-align: center;
 }
 
-.botao {
-    
+h4 {
+    color: white;
+}
+input#quant {
+    text-align: center;
+}
+body#carrinho{
+    background-color: silver;
 }
 

@@ -17,10 +17,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- jQuery library -->
 <script src="js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="loja.css">
   </head>
-  <body class="bg-dark">
-      <p>Carrinho de Compras</p><br/><br/>
-      <p>Meus produtos escolhidos são:</p><br/><br/>
+  <body id="carrinho">
+      <h3 id="carrinho">Carrinho de Compras</h3><br/><br/>
+      <h3 id="carrinho">Meus produtos escolhidos são:</h3><br/><br/>
     <?php
     
     if(isset($_POST['id_txt'])){
@@ -47,9 +48,15 @@
                     $pos = $i;
                 }
             }
-            $meucarrinho[] = array('id' => $id, 'nome' => $nome, 'preco' => $preco, 
-            'quantidade' => $quantidade);
-        
+            if($pos <> -1) {
+                $quant = $meucarrinho[$pos]['quantidade'] + $quantidade;
+                $meucarrinho[$pos] = array('id' => $id, 'nome' => $nome, 'preco' => $preco, 
+                'quantidade' => $quant);
+            } else {
+                $meucarrinho[] = array('id' => $id, 'nome' => $nome, 'preco' => $preco, 
+                'quantidade' => $quantidade);
+            }
+            
         }
         
     }
@@ -75,7 +82,13 @@
               <td class="produtos"><?php echo $meucarrinho[$i]['nome']; ?></td>
               <td class="produtos"><?php echo "R$ ".number_format($meucarrinho
                       [$i]['preco'],2,',','.'); ?></td>
-              <td class="produtos"><?php echo $meucarrinho[$i]['quantidade']; ?></td>
+              <td class="produtos">
+                  <form method="post"action="" name="atualizar">
+                      <input type="hidden" name="id2" value="<?php $i ?>"/>
+                      <input type="text" id="quant" name="quantidade2" value="<?php echo 
+                      $meucarrinho[$i]['quantidade']; ?>" size="2" maxlength="2"/>
+                  </form>
+              </td>
               <?php
               $subtotal = $meucarrinho[$i]['preco'] * $meucarrinho[$i]
                       ['quantidade'];
