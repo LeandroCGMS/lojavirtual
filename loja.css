@@ -117,4 +117,7 @@ input#quant {
 body#carrinho{
     background-color: silver;
 }
+img#atualizar{
+    opacity: 0.5;
+}
 

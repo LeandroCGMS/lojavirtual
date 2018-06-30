@@ -61,6 +61,12 @@
         
     }
     
+    if(isset($_POST['id2'])){
+        $indice = $_POST['id2'];
+        $quant = $_POST['quantidade2'];
+        $meucarrinho[$indice]['quantidade'] = $quant;
+    }
+    
     if(isset($meucarrinho)) $_SESSION['carrinho'] = $meucarrinho;
     ?>
       <table>
@@ -87,6 +93,7 @@
                       <input type="hidden" name="id2" value="<?php $i ?>"/>
                       <input type="text" id="quant" name="quantidade2" value="<?php echo 
                       $meucarrinho[$i]['quantidade']; ?>" size="2" maxlength="2"/>
+                      <input type="image" id="atualizar" width="25" height="25" src="imagens/atualizar.png"/>
                   </form>
               </td>
               <?php
